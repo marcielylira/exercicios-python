@@ -12,17 +12,17 @@ peso= float(input('Informe o peso(kg): '))
 altura= float(input('Informe a altura(m): '))
 print(""
       "")
-imc= peso // altura ** 2
-print('O IMC é de: \033[34m{}\033[m'.format(imc))
+imc= peso / (altura ** 2)
+print('Seu IMC: \033[34m{:.1f}\033[m'.format(imc))
 
-if imc < 1.5:
+if imc < 18.5:
     print('\033[31mABAIXO DO PESO')
-elif imc < 25:
+elif 18.5 <= imc < 25:
     print('\033[32mPESO IDEAL')
-elif imc < 30:
+elif 25 <= imc < 30:
     print('\033[31mSOBREPESO')
-elif imc < 40:
+elif 30 <= imc < 40:
     print('\033[31mOBESIDADE')
-elif imc > 40:
+elif imc >= 40:
     print('\033[31mOBESIDADE MÓRBIDA')
 
